@@ -9,7 +9,7 @@ class TrainController extends Controller
 {
     public function index()
     {
-        $houses = Train::all();
+        $trains = Train::all();
         return view('home', compact('trains'));
     }
 }
