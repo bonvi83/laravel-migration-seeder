@@ -5,8 +5,11 @@
 @section('main-content')
   <section>
     <div class="container py-4">
-      <h1>Laravel MIgration Seeder</h1>
+      <h1>Laravel Migration Seeder</h1>
       <h3>Tabella treni</h3>
+      <div>
+        qui visualizzo la mia tabella
+      </div>
     </div>
   </section>
 @endsection
