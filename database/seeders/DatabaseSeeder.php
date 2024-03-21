@@ -14,6 +14,10 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        // vado a chiamare il mio file TrainSeeder, altrimenti non funziona nulla
+        $this->call([TrainSeeder::class]);
+
+
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([

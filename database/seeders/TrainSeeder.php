@@ -37,9 +37,13 @@ class TrainSeeder extends Seeder
         $train->save();
 
 
-        // vado ad aprire il mio file csv ed a stamparlo nel terminale
+        // vado ad aprire il mio file csv ed a stamparlo nel terminale, con il solo var_dump mi stampa solo la prima riga, con il while, me le stampa tutte
         $file = fopen(__DIR__ . "/../csv/train.csv", "r");
-        var_dump(fgetcsv($file));
+        while (!feof($file)) {
+            // ora sostituisco il var_dump e creo una variabile
+            $train_data = (fgetcsv($file));
+        }
+        
 
     // ovviamente posso agguingere tutti i treni che voglio, tramite un ciclo di un arrey
 }
