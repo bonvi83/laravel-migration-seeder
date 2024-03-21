@@ -17,6 +17,7 @@ class TrainSeeder extends Seeder
     // vado a creare un nuovo treno, quindi una nuova riga del database
     public function run()
     {
+        // prima parte dell'esercizio che commento per utilizzare un file csv
         $train = new Train;
 
         $train->azienda = "ferrovie Bonvi";
@@ -34,6 +35,12 @@ class TrainSeeder extends Seeder
         $train->cancellato = 0;
 
         $train->save();
-    }
+
+
+        // vado ad aprire il mio file csv ed a stamparlo nel terminale
+        $file = fopen(__DIR__ . "/../csv/train.csv", "r");
+        var_dump(fgetcsv($file));
+
     // ovviamente posso agguingere tutti i treni che voglio, tramite un ciclo di un arrey
+}
 }
