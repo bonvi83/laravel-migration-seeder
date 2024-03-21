@@ -4,6 +4,7 @@
 @section('main-content')
   <section>
     <h1>TRENI</h1>
+
     <table class="table">
       <thead>
         <tr>
@@ -18,11 +19,12 @@
           <th>numero di carrozze</th>
           <th>prezzo del biglietto</th>
           <th>posto a sedere</th>
-          <th>fumaroti</th>
+          <th>fumatori</th>
           <th>in orario</th>
           <th>cancellato</th>
         </tr>
       </thead>
+
       <tbody>
         @forelse($trains as $train)
         <tr>
@@ -37,14 +39,13 @@
           <td>{{ $train->numero_di_carrozze }}</td>
           <td>{{ $train->prezzo_del_biglietto }}</td>
           <td>{{ $train->posto_a_sedere }}</td>
-          <td>{{ $train->fumatori }}</td>
-          <td>{{ $train->in_orario }}</td>
-          <td>{{ $train->cancellato }}</td>
+          <td>{{ $train->fumatori ? 'si' : 'no' }}</td>
+          <td>{{ $train->in_orario ? 'si' : 'no' }}</td>
+          <td>{{ $train->cancellato ? 'si' : 'no'}}</td>
         </tr>
 
-        {{-- @empty
-          
-        @endempty --}}
+        @empty
+
         @endforelse
       </tbody>
     </table>
