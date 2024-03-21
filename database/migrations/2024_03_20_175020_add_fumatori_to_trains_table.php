@@ -15,7 +15,7 @@ return new class extends Migration
     {
         // aggiungo un campo fumatori alla mia tabella trains e la sposto dove voglio (non alla fine della tabella)
         Schema::table('trains', function (Blueprint $table) {
-            $table->boolean('fumatori')->after('Posto a sedere');
+            $table->boolean('fumatori')->after('posto_a_sedere');
         });
     }
 

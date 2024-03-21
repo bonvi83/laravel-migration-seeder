@@ -13,21 +13,21 @@ return new class extends Migration
      */
     public function up()
     {
-        // nella tabella vado ad inserire tutti i miei "parametri"
+        // nella tabella vado ad inserire tutti i miei "parametri", do anche una lunghezza massima ai caratteri da poter inserire nella stringa
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
-            $table->string('Azienda');
-            $table->string('Stazione di partenza');
-            $table->string('Stazione di arrivo');
-            $table->time('Orario di partenza');
-            $table->time('Orario di arrivo');
-            $table->string('Numero di fermate');
-            $table->string('Codice treno');
-            $table->string('Numero di carrozze');
-            $table->string('Prezzo del biglietto');
-            $table->string('Posto a sedere');
-            $table->boolean('In orario');
-            $table->boolean('Cancellato');
+            $table->string('azienda', 30);
+            $table->string('stazione_di_partenza', 30);
+            $table->string('stazione_di_arrivo', 30);
+            $table->time('orario_di_partenza');
+            $table->time('orario_di_arrivo');
+            $table->string('numero_di_fermate', 30);
+            $table->string('codice_treno', 30);
+            $table->string('numero_di_carrozze', 30);
+            $table->string('prezzo_del_biglietto', 30);
+            $table->string('posto_a_sedere', 30);
+            $table->boolean('in_orario');
+            $table->boolean('cancellato');
             $table->timestamps();
         });
     }

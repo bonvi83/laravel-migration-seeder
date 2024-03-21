@@ -20,5 +20,17 @@ Inserite inizialmente i dati tramite PhpMyAdmin.
 
 Create Model relativo ed un Controller per mostrare nella home page tutti i treni che sono in partenza dalla data odierna.
 
-**Bonus**
+Aggiungiamo un seeder per la classe Train usando FakerPHP.
+
+**Bonus 1**
 Create una seconda migration per aggiungere/modificare una colonna della tabella
+
+**Bonus 2**
+Implementare il seeder tramite un file csv.
+
+**Bonus 3**
+Implementare la paginazione dei risultati.
+
+Per formattare correttamente i links:
+importare la classe Paginator con `use Illuminate\Pagination\Paginator;` nel file `app\Providers\AppServiceProvider.php`
+aggiungere la riga `Paginator::useBootstrap();` nel metodo `boot()`
